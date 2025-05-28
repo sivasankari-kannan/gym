@@ -144,5 +144,3 @@ const MemberList: React.FC = () => {
 };
 
 export default MemberList;
-
-export default MemberList
