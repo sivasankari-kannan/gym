@@ -13,8 +13,10 @@ import SignInPage from './pages/SignInPage';
 import SignUpPage from './pages/SignUpPage';
 import DashboardPage from './pages/DashboardPage';
 import MembersPage from './pages/MembersPage';
+import AddMemberPage from './pages/AddMemberPage';
 import MemberDetailsPage from './pages/MemberDetailsPage';
 import MembershipsPage from './pages/MembershipsPage';
+import CreatePlanPage from './pages/CreatePlanPage';
 import AttendancePage from './pages/AttendancePage';
 import DueDatesPage from './pages/DueDatesPage';
 
@@ -109,6 +111,14 @@ function App() {
             }
           />
           <Route
+            path="/members/new"
+            element={
+              <ProtectedRoute>
+                <AddMemberPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
             path="/members/:id"
             element={
               <ProtectedRoute>
@@ -121,6 +131,14 @@ function App() {
             element={
               <ProtectedRoute>
                 <MembershipsPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/memberships/new"
+            element={
+              <ProtectedRoute>
+                <CreatePlanPage />
               </ProtectedRoute>
             }
           />
