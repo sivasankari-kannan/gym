@@ -55,11 +55,17 @@ const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
 const AuthRedirect = () => {
   const { isAuthenticated, isLoading, user } = useAuth();
 
-  if (isLoading) return null;
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600"></div>
+      </div>
+    );
+  }
 
   if (isAuthenticated) {
     if (user?.role === 'admin') {
-      return <Navigate to="/admin\" replace />;
+      return <Navigate to="/admin" replace />;
     }
     return <Navigate to="/dashboard" replace />;
   }
@@ -136,7 +142,7 @@ function App() {
           />
 
           {/* Fallback route */}
-          <Route path="*" element={<Navigate to="/\" replace />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
 
