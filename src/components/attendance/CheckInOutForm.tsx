@@ -96,7 +96,7 @@ const CheckInOutForm: React.FC = () => {
 
             {searchResults.length > 0 && (
               <div className="absolute z-10 mt-1 w-full rounded-md bg-white shadow-lg max-h-60 overflow-auto ring-1 ring-black ring-opacity-5">
-                <ul className="py-1" role="listbox">
+                <ul className="py-1\" role="listbox">
                   {searchResults.map((member) => (
                     <li
                       key={member.id}
