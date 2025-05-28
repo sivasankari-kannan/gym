@@ -61,21 +61,6 @@ const MemberList: React.FC = () => {
             >
               {statusFilter ? statusFilter.charAt(0).toUpperCase() + statusFilter.slice(1) : 'All Statuses'}
             </Button>
-            
-            <div className="absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none hidden">
-              <div className="py-1" role="none">
-                {['all', 'active', 'inactive', 'pending'].map((status) => (
-                  <button
-                    key={status}
-                    className="text-gray-700 block px-4 py-2 text-sm w-full text-left hover:bg-gray-100"
-                    role="menuitem"
-                    onClick={() => setStatusFilter(status === 'all' ? null : status)}
-                  >
-                    {status.charAt(0).toUpperCase() + status.slice(1)}
-                  </button>
-                ))}
-              </div>
-            </div>
           </div>
 
           <Link to="/members/new">
@@ -159,3 +144,5 @@ const MemberList: React.FC = () => {
 };
 
 export default MemberList;
+
+export default MemberList

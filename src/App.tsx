@@ -59,7 +59,7 @@ const AuthRedirect = () => {
 
   if (isAuthenticated) {
     if (user?.role === 'admin') {
-      return <Navigate to="/admin" replace />;
+      return <Navigate to="/admin\" replace />;
     }
     return <Navigate to="/dashboard" replace />;
   }
@@ -136,7 +136,7 @@ function App() {
           />
 
           {/* Fallback route */}
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<Navigate to="/\" replace />} />
         </Routes>
       </BrowserRouter>
 
